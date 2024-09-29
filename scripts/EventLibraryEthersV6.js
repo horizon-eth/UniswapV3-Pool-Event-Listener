@@ -1,6 +1,6 @@
-const { uniswapV3PoolContractV6 } = require("../config");
+import { uniswapV3PoolContractV6 } from "../config.js";
 
-class EventLibraryEthersV6 {
+export default class EventLibraryEthersV6 {
 	// ---------------------- activating pool listening ----------------------
 	addListener = (eventName, eventListenerFunction) => uniswapV3PoolContractV6.addListener(eventName, eventListenerFunction); // addListener() => Listen for eventName continuously
 
@@ -31,5 +31,3 @@ class EventLibraryEthersV6 {
 	getEvent = (eventName) => uniswapV3PoolContractV6.getEvent(eventName); // getEvent() => Returns the event for a given name
 	// ---------------------- get pool event ----------------------
 }
-
-module.exports = EventLibraryEthersV6;

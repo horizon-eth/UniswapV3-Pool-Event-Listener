@@ -2,6 +2,7 @@
   "name": "uniswap-v3-pool-event-listener-with-ethers-v5-v6",
   "version": "1.0.0",
   "main": "index",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
@@ -18,8 +19,8 @@
     "liquidity pool",
     "lp",
     "amm",
-    "cpmm",
-    "cplp"
+    "clmm",
+    "cllp"
   ],
   "author": "horizon-eth",
   "license": "ISC",

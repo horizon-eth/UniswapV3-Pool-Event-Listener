@@ -1,6 +1,6 @@
-const { uniswapV3PoolContractV5 } = require("../config");
+import { uniswapV3PoolContractV5 } from "../config.js";
 
-class EventLibraryEthersV5 {
+export default class EventLibraryEthersV5 {
 	// ---------------------- activating pool listening ----------------------
 	on = (eventName, eventListenerFunction) => uniswapV3PoolContractV5.on(eventName, eventListenerFunction); // on() => Listen for eventName continuously
 
@@ -22,8 +22,6 @@ class EventLibraryEthersV5 {
 	// ---------------------- pool listener info ----------------------
 
 	// ---------------------- fetching pool events ----------------------
-	queryFilter = (eventName, fromBlockOrBlockhash, toBlock) => uniswapV3PoolContractV5.queryFilter(eventName, fromBlockOrBlockhash, toBlock); // queryFilter() => Returns all events that have been occured between fromBlockOrBlockhash to toBlock range
+	queryFilter = (eventName, fromBlockOrBlockhash = 0, toBlock = "latest") => uniswapV3PoolContractV5.queryFilter(eventName, fromBlockOrBlockhash, toBlock); // queryFilter() => Returns all events that have been occured between fromBlockOrBlockhash to toBlock range
 	// ---------------------- fetching pool events ----------------------
 }
-
-module.exports = EventLibraryEthersV5;
