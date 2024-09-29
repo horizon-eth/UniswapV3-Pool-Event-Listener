@@ -13,9 +13,9 @@ This project works on most EVM-compatible chains but may sometimes experience is
    - `EVENT_NAME`: The name of the event you wish to listen to (see below).
 
 2. Install project dependencies by running the following command:
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 ---
 
